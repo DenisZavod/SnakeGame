@@ -10,9 +10,9 @@ namespace SnakeGame
 	{
 		assert(data.font.loadFromFile(FONTS_PATH + "Roboto-Regular.ttf"));
 
-		data.titleText.setString(L"Рекорды");
+		data.titleText.setString(L"Рекорды игроков");
 		data.titleText.setFont(data.font);
-		data.titleText.setFillColor(sf::Color::Red);
+		data.titleText.setFillColor(sf::Color::Green);
 		data.titleText.setCharacterSize(30);
 
 		data.tableTexts.reserve(MAX_RECORDS_TABLE_SIZE);

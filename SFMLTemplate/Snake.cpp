@@ -124,19 +124,19 @@ namespace SnakeGame
 
 	void HandleInput(Snake& snake)
 	{
-		if (sf::Keyboard::isKeyPressed(sf::Keyboard::W) && snake.direction != SnakeDirection::Down)
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up) && snake.direction != SnakeDirection::Down)
 		{
 			snake.direction = SnakeDirection::Up;
 		}
-		else if (sf::Keyboard::isKeyPressed(sf::Keyboard::D) && snake.direction != SnakeDirection::Left)
+		else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right) && snake.direction != SnakeDirection::Left)
 		{
 			snake.direction = SnakeDirection::Right;
 		}
-		else if (sf::Keyboard::isKeyPressed(sf::Keyboard::A) && snake.direction != SnakeDirection::Right)
+		else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left) && snake.direction != SnakeDirection::Right)
 		{
 			snake.direction = SnakeDirection::Left;
 		}
-		else if (sf::Keyboard::isKeyPressed(sf::Keyboard::S) && snake.direction != SnakeDirection::Up)
+		else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down) && snake.direction != SnakeDirection::Up)
 		{
 			snake.direction = SnakeDirection::Down;
 		}

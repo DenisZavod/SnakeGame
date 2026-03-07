@@ -6,6 +6,7 @@
 
 namespace SnakeGame
 {
+	// init struct apple
 	struct Apple
 	{
 		Position2D position;

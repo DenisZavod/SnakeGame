@@ -17,13 +17,13 @@ namespace SnakeGame
 		data.gameOverText.setCharacterSize(48);
 		data.gameOverText.setStyle(sf::Text::Bold);
 		data.gameOverText.setFillColor(sf::Color::Red);
-		data.gameOverText.setString(L"Вы проиграли");
+		data.gameOverText.setString(L"Вы проиграли!");
 		data.gameOverText.setOrigin(GetTextOrigin(data.gameOverText, { 0.5f, 0.5f }));
 
 		data.hintText.setFont(data.font);
 		data.hintText.setCharacterSize(24);
 		data.hintText.setFillColor(sf::Color::White);
-		data.hintText.setString(L"Нажмите Space для перезапуска");
+		data.hintText.setString(L"Нажмите клавишу пробела для перезапуска");
 		data.hintText.setOrigin(GetTextOrigin(data.hintText, { 0.5f, 1.f }));
 
 		data.recordsTableTexts.reserve(MAX_RECORDS_TABLE_SIZE);

@@ -8,7 +8,7 @@ namespace SnakeGame
 	{
 		assert(data.font.loadFromFile(FONTS_PATH + "Roboto-Regular.ttf"));
 
-		data.hintText.setString(L"Вы уверены что хотите завершить эту игру? Enter - Да, Esc - Нет");
+		data.hintText.setString(L"Завершить игру? Enter - Да, Esc - Нет");
 		data.hintText.setFont(data.font);
 		data.hintText.setCharacterSize(24);
 		data.hintText.setFillColor(sf::Color::White);

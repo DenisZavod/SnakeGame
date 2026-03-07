@@ -11,8 +11,8 @@ int main()
 	unsigned int seed = (unsigned int)time(nullptr); // Get current time as seed. You can also use any other number to fix randomization
 	srand(seed);
 
-	//Init window
-	sf::RenderWindow window(sf::VideoMode(SCREEN_WIDTH, SCREEN_HEIGHT), "Sssssnake game!");
+	//Init window game
+	sf::RenderWindow window(sf::VideoMode(SCREEN_WIDTH, SCREEN_HEIGHT), "Snake game");
 
 	// We now use too much memory for stack, so we need to allocate it on heap
 	SnakeGame::Game* game = new SnakeGame::Game();

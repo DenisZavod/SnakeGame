@@ -14,7 +14,7 @@ namespace SnakeGame
 		Alignment childrenAlignment = Alignment::Min;
 		float childrenSpacing;
 
-		sf::Color selectedColor = sf::Color::Yellow;
+		sf::Color selectedColor = sf::Color::Red;
 		sf::Color deselectedColor = sf::Color::White;
 
 		bool isEnabled = true;

@@ -23,7 +23,7 @@ namespace SnakeGame
 				}
 			};
 
-		setTextParameters(data.menu.rootItem.hintText, L"Змейка", 48, sf::Color::Red);
+		setTextParameters(data.menu.rootItem.hintText, L"Игра змейка", 48, sf::Color::Green);
 		data.menu.rootItem.childrenOrientation = Orientation::Vertical;
 		data.menu.rootItem.childrenAlignment = Alignment::Middle;
 		data.menu.rootItem.childrenSpacing = 10.f;
@@ -35,10 +35,10 @@ namespace SnakeGame
 
 		setTextParameters(data.startGameItem.text, L"Старт", 24);
 		setTextParameters(data.difficultyItem.text, L"Уровень сложности", 24);
-		setTextParameters(data.optionsItem.text, L"Настройки", 24);
-		setTextParameters(data.recordsItem.text, L"Таблица рекордов", 24);
+		setTextParameters(data.optionsItem.text, L"Настройки игры", 24);
+		setTextParameters(data.recordsItem.text, L"Таблица рекордов игроков", 24);
 
-		setTextParameters(data.difficultyItem.hintText, L"Выберите уровень сложности", 48, sf::Color::Red);
+		setTextParameters(data.difficultyItem.hintText, L"Выберите уровень сложности игры", 48, sf::Color::Yellow);
 		data.difficultyItem.childrenOrientation = Orientation::Vertical;
 		data.difficultyItem.childrenAlignment = Alignment::Middle;
 		data.difficultyItem.childrenSpacing = 10.f;
@@ -48,10 +48,10 @@ namespace SnakeGame
 		data.difficultyItem.children.push_back(&data.difficultyInsaneItem);
 		data.difficultyItem.children.push_back(&data.difficultyImpossibleItem);
 		setTextParameters(data.difficultyEasyItem.text, L"Лёгкий: вкл/выкл", 24);
-		setTextParameters(data.difficultyNormalItem.text, L"Нормальный: On/Off", 24);
-		setTextParameters(data.difficultyHardItem.text, L"Сложный: On/Off", 24);
-		setTextParameters(data.difficultyInsaneItem.text, L"Безумный: On/Off", 24);
-		setTextParameters(data.difficultyImpossibleItem.text, L"Невозможный: On/Off", 24);
+		setTextParameters(data.difficultyNormalItem.text, L"Обычный: On/Off", 24);
+		setTextParameters(data.difficultyHardItem.text, L"Сложный 1: On/Off", 24);
+		setTextParameters(data.difficultyInsaneItem.text, L"Слодный 2: On/Off", 24);
+		setTextParameters(data.difficultyImpossibleItem.text, L"Сложный 3: On/Off", 24);
 
 		setTextParameters(data.optionsItem.hintText, L"Настройки", 48, sf::Color::Red);
 		data.optionsItem.childrenOrientation = Orientation::Vertical;
@@ -64,7 +64,7 @@ namespace SnakeGame
 		setTextParameters(data.optionsMusicItem.text, L"With Acceleration: On/Off", 24);
 		setTextParameters(data.exitGameItem.text, L"Выйти из игры", 24);
 
-		setTextParameters(data.exitGameItem.hintText, L"Вы уверены?", 48, sf::Color::Red);
+		setTextParameters(data.exitGameItem.hintText, L"Вы уверены?", 48, sf::Color::Yellow);
 		data.exitGameItem.childrenOrientation = Orientation::Horizontal;
 		data.exitGameItem.childrenAlignment = Alignment::Middle;
 		data.exitGameItem.childrenSpacing = 10.f;
@@ -186,10 +186,10 @@ namespace SnakeGame
 	void UpdateGameStateMainMenu(GameStateMainMenuData& data, Game& game, float timeDelta)
 	{
 		data.difficultyEasyItem.text.setString(L"Лёгкий: " + std::wstring(game.difficulty == DifficultyLevel::Easy ? L"Вкл" : L"Выкл"));
-		data.difficultyNormalItem.text.setString(L"Нормальный: " + std::wstring(game.difficulty == DifficultyLevel::Normal ? L"Вкл" : L"Выкл"));
-		data.difficultyHardItem.text.setString(L"Сложный: " + std::wstring(game.difficulty == DifficultyLevel::Hard ? L"Вкл" : L"Выкл"));
-		data.difficultyInsaneItem.text.setString(L"Безумный: " + std::wstring(game.difficulty == DifficultyLevel::Insane ? L"Вкл" : L"Выкл"));
-		data.difficultyImpossibleItem.text.setString(L"Невозможный: " + std::wstring(game.difficulty == DifficultyLevel::Impossible ? L"Вкл" : L"Выкл"));
+		data.difficultyNormalItem.text.setString(L"Обычный: " + std::wstring(game.difficulty == DifficultyLevel::Normal ? L"Вкл" : L"Выкл"));
+		data.difficultyHardItem.text.setString(L"Сложный 1: " + std::wstring(game.difficulty == DifficultyLevel::Hard ? L"Вкл" : L"Выкл"));
+		data.difficultyInsaneItem.text.setString(L"Сложный 2: " + std::wstring(game.difficulty == DifficultyLevel::Insane ? L"Вкл" : L"Выкл"));
+		data.difficultyImpossibleItem.text.setString(L"Сложный 3: " + std::wstring(game.difficulty == DifficultyLevel::Impossible ? L"Вкл" : L"Выкл"));
 
 		bool isSound = ((std::uint8_t)game.options & (std::uint8_t)GameModeOption::Sound);
 		data.optionsSoundItem.text.setString(L"Звук: " + std::wstring(isSound ? L"Вкл" : L"Выкл"));

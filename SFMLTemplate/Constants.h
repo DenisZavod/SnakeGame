@@ -14,19 +14,18 @@ namespace SnakeGame
 
 	const float SNAKE_SIZE = 20.0f;
 	const unsigned int INITIAL_SNAKE_SIZE = 3;
-	const float INITIAL_SPEED = 50.0f; //Pixels per second
+	const float INITIAL_SPEED = 50.0f;
 	const float ACCELERATION = 10.0f;
 
 	const float APPLE_SIZE = 20.0f;
 	const int NUM_APPLES = 1;
-	//int numApple = 15;
 
 	const float ROCK_SIZE = 20.0f;
 	const int NUM_ROCKS = 10;
 
-	const float TIME_PER_FRAME = 1.f / 60.f; // 60 fps
+	const float TIME_PER_FRAME = 1.f / 60.f;
 
 	const int MAX_RECORDS_TABLE_SIZE = 5;
-	extern const char* PLAYER_NAME; // We need to define this constant in some SPP
+	extern const char* PLAYER_NAME;
 
 }

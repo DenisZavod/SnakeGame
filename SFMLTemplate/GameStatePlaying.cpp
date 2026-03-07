@@ -49,7 +49,7 @@ namespace SnakeGame
 		data.inputHintText.setFont(data.font);
 		data.inputHintText.setCharacterSize(16);
 		data.inputHintText.setFillColor(sf::Color::White);
-		data.inputHintText.setString(L"»спользуйте клавишы WASD дл€ перемещени€, ESC дл€ выхода");
+		data.inputHintText.setString(L"»спользуйте клавишы стрелочек дл€ перемещени€, ESC дл€ выхода");
 		data.inputHintText.setOrigin(GetTextOrigin(data.inputHintText, { 1.f, 0.f }));
 
 		data.soundBackground.setBuffer(data.soundBackgroundBuffer);
@@ -146,7 +146,7 @@ namespace SnakeGame
 			}
 		}
 
-		data.scoreText.setString(L"—ъедено €блок: " + std::to_wstring(data.numEatenApples));
+		data.scoreText.setString(L"«мейка съела €блок: " + std::to_wstring(data.numEatenApples));
 
 		for (int i = 0; i < NUM_ROCKS; ++i)
 		{
